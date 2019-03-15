@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="qualified" >	
+	<xs:element name="XmlUtilities" type="XmlUtilities_Type">
+		<xs:annotation>
+			<xs:documentation>Storage info</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="XmlUtilities_Type">
+		<xs:sequence>
+			<xs:element name="AssociationVarInType" type="AssociationVarType_Type">
+				<xs:annotation>
+					<xs:documentation>Storage info about association input variable and type</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="AssociationVarOutType" type="AssociationVarType_Type">
+				<xs:annotation>
+					<xs:documentation>Storage info about association output variable and type</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TypesNoVariables" type="TypesNoVariables_Type">
+				<xs:annotation>
+					<xs:documentation>Storage info about types that aren't associated with a variable</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TypeHierarchy" type="TypeHierarchy_Type">
+				<xs:annotation>
+					<xs:documentation>Storage info about type hierarchy</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="AssociationVarType_Type">
+		<xs:sequence>
+			<xs:element name="Variable" type="Variable_Type" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Input Variable: name and type</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Variable_Type">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+     			<xs:attribute name="name" type="xs:string"/>
+     		</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="TypesNoVariables_Type">
+		<xs:sequence>
+			<xs:element name="Type" type="Type_Type" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Input Variable: name and type</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TskType" type="TskType_Type" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Input Variable: name and type</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Type_Type">
+		<xs:sequence>
+			<xs:element name="FuzzyTerm" type="FuzzyTermType" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Fuzzy Set</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="name" type="xs:string" use="required"/>
+		<xs:attribute name="domainleft" type="xs:float"  use="required"/>
+		<xs:attribute name="domainright" type="xs:float" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="FuzzyTermType">
+		<xs:choice>
+			<xs:element name="RightLinearShape" type="TwoParamType" >
+				<xs:annotation>
+					<xs:documentation>Right Linear Fuzzy Set</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="LeftLinearShape" type="TwoParamType" >
+				<xs:annotation>
+					<xs:documentation>Left Linear Fuzzy Set</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PIShape" type="TwoParamType" >
+				<xs:annotation>
+					<xs:documentation>Pishape Fuzzy Set</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TriangularShape" type="ThreeParamType" >
+				<xs:annotation>
+					<xs:documentation>Triangle Fuzzy Set</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="GaussianShape" type="TwoParamType" >
+				<xs:annotation>
+					<xs:documentation>Gaussian Fuzzy Set</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="RightGaussianShape" type="TwoParamType" >
+				<xs:annotation>
+					<xs:documentation>Right Gaussian Fuzzy Set</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="LeftGaussianShape" type="TwoParamType" >
+				<xs:annotation>
+					<xs:documentation>Left Gaussian Fuzzy Set</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TrapezoidShape" type="FourParamType" >
+				<xs:annotation>
+					<xs:documentation>Trapezoid Fuzzy Set</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SingletonShape" type="OneParamType" >
+				<xs:annotation>
+					<xs:documentation>Singleton Fuzzy Set</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="RectangularShape" type="TwoParamType" >
+				<xs:annotation>
+					<xs:documentation>Rectagle Fuzzy Set</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ZShape" type="TwoParamType" >
+				<xs:annotation>
+					<xs:documentation>Z Fuzzy Set</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SShape" type="TwoParamType" >
+				<xs:annotation>
+					<xs:documentation>S Fuzzy Set</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="UserShape" type="UserShapeType" >
+				<xs:annotation>
+					<xs:documentation>Custom Fuzzy Set</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:choice>
+		<xs:attribute name="name" type="xs:string" use="required"/>
+		<xs:attribute name="complement" default="false">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:pattern value="true|false"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="OneParamType">
+		<xs:attribute name="Param1" type="xs:float" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="TwoParamType">
+		<xs:attribute name="Param1" type="xs:float" use="required"/>
+		<xs:attribute name="Param2" type="xs:float" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="ThreeParamType">
+		<xs:attribute name="Param1" type="xs:float" use="required"/>
+		<xs:attribute name="Param2" type="xs:float" use="required"/>
+		<xs:attribute name="Param3" type="xs:float" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="FourParamType">
+		<xs:attribute name="Param1" type="xs:float" use="required"/>
+		<xs:attribute name="Param2" type="xs:float" use="required"/>
+		<xs:attribute name="Param3" type="xs:float" use="required"/>
+		<xs:attribute name="Param4" type="xs:float" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="UserShapeType">
+		<xs:sequence>
+			<xs:element name="Point" type="PointType" minOccurs="2" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PointType">
+		<xs:attribute name="x" type="xs:float" use="required"/>
+		<xs:attribute name="y" type="xs:float" use="required"/>
+	</xs:complexType>
+	
+	
+	<xs:complexType name="TskType_Type">
+		<xs:sequence>
+		  	<xs:element name="TSKTerm" type="TSKTermType"  maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>TSK Value</xs:documentation>
+				</xs:annotation>
+			</xs:element>	
+		</xs:sequence>
+		<xs:attribute name="name" type="xs:string"/>
+	</xs:complexType>	
+	<xs:complexType name="TSKTermType">
+			<xs:sequence>
+				<xs:element name="TSKValue" type="xs:float" maxOccurs="unbounded"/>
+			</xs:sequence>
+		<xs:attribute name="name" type="xs:string" use="required"/>
+		<xs:attribute name="order">
+			<xs:simpleType>
+				<xs:restriction base="xs:int">
+					<xs:pattern value="0|1"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="TypeHierarchy_Type">
+		<xs:sequence>
+			<xs:element name="Type" type="TypeSubtype_Type" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>type, subtype and parent</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TypeSubtype_Type">
+		<xs:sequence>
+			<xs:element name="SubType" type="Subtype_Type" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>type, subtype and parent</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="name" type="xs:string" use="required"/>
+		<xs:attribute name="parent" type="xs:string" />
+	</xs:complexType>
+	<xs:complexType name="Subtype_Type">
+		<xs:attribute name="name" type="xs:string" use="required"/>
+	</xs:complexType>
+	</xs:schema>

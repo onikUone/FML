@@ -1,0 +1,348 @@
+<log4j:event logger="avvio.AvvioEditorFML" timestamp="1334557781025" level="INFO" thread="main">
+<log4j:message><![CDATA[FML Editor Started...]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="avvio.AvvioEditorFML" timestamp="1334561625029" level="INFO" thread="main">
+<log4j:message><![CDATA[FML Editor Started...]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="avvio.AvvioEditorFML" timestamp="1336123002135" level="INFO" thread="main">
+<log4j:message><![CDATA[FML Editor Started...]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="avvio.AvvioEditorFML" timestamp="1343638568079" level="INFO" thread="main">
+<log4j:message><![CDATA[FML Editor Started...]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="fuzzyJExtension.Accumulation" timestamp="1343642109646" level="ERROR" thread="AWT-EventQueue-0">
+<log4j:message><![CDATA[[Ljava.lang.StackTraceElement;@1bb0d9c]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="fuzzyJExtension.Accumulation" timestamp="1343642109646" level="ERROR" thread="AWT-EventQueue-0">
+<log4j:message><![CDATA[[Ljava.lang.StackTraceElement;@17ab612]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="fuzzyJExtension.Accumulation" timestamp="1343642109647" level="ERROR" thread="AWT-EventQueue-0">
+<log4j:message><![CDATA[[Ljava.lang.StackTraceElement;@14789bd]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="fuzzyJExtension.Accumulation" timestamp="1343642109647" level="ERROR" thread="AWT-EventQueue-0">
+<log4j:message><![CDATA[[Ljava.lang.StackTraceElement;@1a3f7bf]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="fuzzyJExtension.Accumulation" timestamp="1343642109647" level="ERROR" thread="AWT-EventQueue-0">
+<log4j:message><![CDATA[[Ljava.lang.StackTraceElement;@1de56e2]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="fuzzyJExtension.Accumulation" timestamp="1343642167538" level="ERROR" thread="AWT-EventQueue-0">
+<log4j:message><![CDATA[[Ljava.lang.StackTraceElement;@1d09296]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="fuzzyJExtension.Accumulation" timestamp="1343642167539" level="ERROR" thread="AWT-EventQueue-0">
+<log4j:message><![CDATA[[Ljava.lang.StackTraceElement;@47eb19]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="fuzzyJExtension.Accumulation" timestamp="1343642167539" level="ERROR" thread="AWT-EventQueue-0">
+<log4j:message><![CDATA[[Ljava.lang.StackTraceElement;@19bce0b]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="fuzzyJExtension.Accumulation" timestamp="1343642167540" level="ERROR" thread="AWT-EventQueue-0">
+<log4j:message><![CDATA[[Ljava.lang.StackTraceElement;@1f46f78]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="fuzzyJExtension.Accumulation" timestamp="1343642167540" level="ERROR" thread="AWT-EventQueue-0">
+<log4j:message><![CDATA[[Ljava.lang.StackTraceElement;@c26dd5]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="fuzzyJExtension.Accumulation" timestamp="1343642302146" level="ERROR" thread="AWT-EventQueue-0">
+<log4j:message><![CDATA[[Ljava.lang.StackTraceElement;@1d89c26]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="fuzzyJExtension.Accumulation" timestamp="1343642302149" level="ERROR" thread="AWT-EventQueue-0">
+<log4j:message><![CDATA[[Ljava.lang.StackTraceElement;@1f389e4]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="fuzzyJExtension.Accumulation" timestamp="1343642302149" level="ERROR" thread="AWT-EventQueue-0">
+<log4j:message><![CDATA[[Ljava.lang.StackTraceElement;@1e1dbd0]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="fuzzyJExtension.Accumulation" timestamp="1343642302149" level="ERROR" thread="AWT-EventQueue-0">
+<log4j:message><![CDATA[[Ljava.lang.StackTraceElement;@12637b4]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="fuzzyJExtension.Accumulation" timestamp="1343642302150" level="ERROR" thread="AWT-EventQueue-0">
+<log4j:message><![CDATA[[Ljava.lang.StackTraceElement;@13229a]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="avvio.AvvioEditorFML" timestamp="1343642353477" level="INFO" thread="main">
+<log4j:message><![CDATA[FML Editor Started...]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="avvio.AvvioEditorFML" timestamp="1343826658237" level="INFO" thread="main">
+<log4j:message><![CDATA[FML Editor Started...]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="avvio.AvvioEditorFML" timestamp="1343826801440" level="INFO" thread="main">
+<log4j:message><![CDATA[FML Editor Started...]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="avvio.AvvioEditorFML" timestamp="1343830274907" level="INFO" thread="main">
+<log4j:message><![CDATA[FML Editor Started...]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="avvio.AvvioEditorFML" timestamp="1343832282121" level="INFO" thread="main">
+<log4j:message><![CDATA[FML Editor Started...]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="avvio.AvvioEditorFML" timestamp="1343985792553" level="INFO" thread="main">
+<log4j:message><![CDATA[FML Editor Started...]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dataFuzzy.mamdani.Type" timestamp="1343986022320" level="ERROR" thread="AWT-EventQueue-0">
+<log4j:message><![CDATA[The X values in the FuzzySet must be in strictly ascending order. 0.6 cannot precede 0.55. LRFuzzySet x parameters are not in ascending x value order.
+-> oneRightX MUST be greater than or equal to zeroRightX.
+]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="avvio.AvvioEditorFML" timestamp="1343991948158" level="INFO" thread="main">
+<log4j:message><![CDATA[FML Editor Started...]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="avvio.AvvioEditorFML" timestamp="1343991995467" level="INFO" thread="main">
+<log4j:message><![CDATA[FML Editor Started...]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="avvio.AvvioEditorFML" timestamp="1343998391397" level="INFO" thread="main">
+<log4j:message><![CDATA[FML Editor Started...]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="avvio.AvvioEditorFML" timestamp="1344002722681" level="INFO" thread="main">
+<log4j:message><![CDATA[FML Editor Started...]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="avvio.AvvioEditorFML" timestamp="1344364116566" level="INFO" thread="main">
+<log4j:message><![CDATA[FML Editor Started...]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="avvio.AvvioEditorFML" timestamp="1344435284067" level="INFO" thread="main">
+<log4j:message><![CDATA[FML Editor Started...]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="avvio.AvvioEditorFML" timestamp="1344624394889" level="INFO" thread="main">
+<log4j:message><![CDATA[FML Editor Started...]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dataFuzzy.mamdani.Type" timestamp="1344631670561" level="ERROR" thread="AWT-EventQueue-0">
+<log4j:message><![CDATA[The X values in the FuzzySet must be in strictly ascending order. 0.9 cannot precede 0.0. LRFuzzySet x parameters are not in ascending x value order.
+-> oneLeftX MUST be greater than or equal to oneRightX.
+]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="avvio.AvvioEditorFML" timestamp="1344714821066" level="INFO" thread="main">
+<log4j:message><![CDATA[FML Editor Started...]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="xmlFML.XmlValidator" timestamp="1344714873525" level="ERROR" thread="AWT-EventQueue-0">
+<log4j:message><![CDATA[Errore di validazione: [48,151]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="xmlFML.ParserFML" timestamp="1344714888570" level="ERROR" thread="AWT-EventQueue-0">
+<log4j:message><![CDATA[cvc-pattern-valid: Value 'MOM' is not facet-valid with respect to pattern 'MM|COG|COA|WA|Custom' for type '#AnonType_defuzzifierFuzzyVariableType'.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="avvio.AvvioEditorFML" timestamp="1345652009903" level="INFO" thread="main">
+<log4j:message><![CDATA[FML Editor Started...]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="avvio.AvvioEditorFML" timestamp="1345718481023" level="INFO" thread="main">
+<log4j:message><![CDATA[FML Editor Started...]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="avvio.AvvioEditorFML" timestamp="1345814449748" level="INFO" thread="main">
+<log4j:message><![CDATA[FML Editor Started...]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="xmlFML.XmlValidator" timestamp="1345814488405" level="ERROR" thread="AWT-EventQueue-0">
+<log4j:message><![CDATA[Errore di validazione: [48,151]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="xmlFML.ParserFML" timestamp="1345814491509" level="ERROR" thread="AWT-EventQueue-0">
+<log4j:message><![CDATA[cvc-pattern-valid: Value 'MOM' is not facet-valid with respect to pattern 'MM|COG|COA|WA|Custom' for type '#AnonType_defuzzifierFuzzyVariableType'.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="avvio.AvvioEditorFML" timestamp="1345907875886" level="INFO" thread="main">
+<log4j:message><![CDATA[FML Editor Started...]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="xmlFML.XmlValidator" timestamp="1345907904489" level="ERROR" thread="AWT-EventQueue-0">
+<log4j:message><![CDATA[Errore di validazione: [48,150]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="xmlFML.ParserFML" timestamp="1345907906652" level="ERROR" thread="AWT-EventQueue-0">
+<log4j:message><![CDATA[cvc-pattern-valid: Value 'MOM' is not facet-valid with respect to pattern 'MM|COG|COA|WA|Custom' for type '#AnonType_defuzzifierFuzzyVariableType'.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="xmlFML.XmlValidator" timestamp="1345907940748" level="ERROR" thread="AWT-EventQueue-0">
+<log4j:message><![CDATA[Errore di validazione: [83,151]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="xmlFML.ParserFML" timestamp="1345907944928" level="ERROR" thread="AWT-EventQueue-0">
+<log4j:message><![CDATA[cvc-pattern-valid: Value 'MOM' is not facet-valid with respect to pattern 'MM|COG|COA|WA|Custom' for type '#AnonType_defuzzifierFuzzyVariableType'.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="xmlFML.XmlValidator" timestamp="1345907977555" level="ERROR" thread="AWT-EventQueue-0">
+<log4j:message><![CDATA[Errore di validazione: [83,151]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="xmlFML.ParserFML" timestamp="1345907980999" level="ERROR" thread="AWT-EventQueue-0">
+<log4j:message><![CDATA[cvc-pattern-valid: Value 'MOM' is not facet-valid with respect to pattern 'MM|COG|COA|WA|Custom' for type '#AnonType_defuzzifierFuzzyVariableType'.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="avvio.AvvioEditorFML" timestamp="1345930770454" level="INFO" thread="main">
+<log4j:message><![CDATA[FML Editor Started...]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="avvio.AvvioEditorFML" timestamp="1355161124258" level="INFO" thread="main">
+<log4j:message><![CDATA[FML Editor Started...]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="avvio.AvvioEditorFML" timestamp="1355243939548" level="INFO" thread="main">
+<log4j:message><![CDATA[FML Editor Started...]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="avvio.AvvioEditorFML" timestamp="1355391140101" level="INFO" thread="main">
+<log4j:message><![CDATA[FML Editor Started...]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="avvio.AvvioEditorFML" timestamp="1356013775478" level="INFO" thread="main">
+<log4j:message><![CDATA[FML Editor Started...]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="avvio.AvvioEditorFML" timestamp="1356088679446" level="INFO" thread="main">
+<log4j:message><![CDATA[FML Editor Started...]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="avvio.AvvioEditorFML" timestamp="1356550487897" level="INFO" thread="main">
+<log4j:message><![CDATA[FML Editor Started...]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="avvio.AvvioEditorFML" timestamp="1356643144505" level="INFO" thread="main">
+<log4j:message><![CDATA[FML Editor Started...]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="avvio.AvvioEditorFML" timestamp="1356798235314" level="INFO" thread="main">
+<log4j:message><![CDATA[FML Editor Started...]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="avvio.AvvioEditorFML" timestamp="1357121497503" level="INFO" thread="main">
+<log4j:message><![CDATA[FML Editor Started...]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="avvio.AvvioEditorFML" timestamp="1357206389118" level="INFO" thread="main">
+<log4j:message><![CDATA[FML Editor Started...]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="avvio.AvvioEditorFML" timestamp="1357295893480" level="INFO" thread="main">
+<log4j:message><![CDATA[FML Editor Started...]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="avvio.AvvioEditorFML" timestamp="1358184068533" level="INFO" thread="main">
+<log4j:message><![CDATA[FML Editor Started...]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="avvio.AvvioEditorFML" timestamp="1359111178865" level="INFO" thread="main">
+<log4j:message><![CDATA[FML Editor Started...]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="avvio.AvvioEditorFML" timestamp="1359622266737" level="INFO" thread="main">
+<log4j:message><![CDATA[FML Editor Started...]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="avvio.AvvioEditorFML" timestamp="1364980023380" level="INFO" thread="main">
+<log4j:message><![CDATA[FML Editor Started...]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="avvio.AvvioEditorFML" timestamp="1370447738678" level="INFO" thread="main">
+<log4j:message><![CDATA[FML Editor Started...]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="avvio.AvvioEditorFML" timestamp="1370621165312" level="INFO" thread="main">
+<log4j:message><![CDATA[FML Editor Started...]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="xmlFML.XmlValidator" timestamp="1370621199304" level="ERROR" thread="AWT-EventQueue-0">
+<log4j:message><![CDATA[Errore di validazione: [18,93]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="xmlFML.ParserFML" timestamp="1370621201346" level="ERROR" thread="AWT-EventQueue-0">
+<log4j:message><![CDATA[cvc-pattern-valid: Value 'òfkv' is not facet-valid with respect to pattern '(([A-Z])|([a-z]))+([A-Z]|[a-z]|[0-9])*' for type '#AnonType_nameFuzzyVariableType'.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="xmlFML.XmlValidator" timestamp="1370621313471" level="ERROR" thread="AWT-EventQueue-0">
+<log4j:message><![CDATA[Errore di validazione: [18,93]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="xmlFML.ParserFML" timestamp="1370621319513" level="ERROR" thread="AWT-EventQueue-0">
+<log4j:message><![CDATA[cvc-pattern-valid: Value 'òfkv' is not facet-valid with respect to pattern '(([A-Z])|([a-z]))+([A-Z]|[a-z]|[0-9])*' for type '#AnonType_nameFuzzyVariableType'.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="avvio.AvvioEditorFML" timestamp="1383910260526" level="INFO" thread="main">
+<log4j:message><![CDATA[FML Editor Started...]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="avvio.AvvioEditorFML" timestamp="1383925180071" level="INFO" thread="main">
+<log4j:message><![CDATA[FML Editor Started...]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="avvio.AvvioEditorFML" timestamp="1384251285332" level="INFO" thread="main">
+<log4j:message><![CDATA[FML Editor Started...]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="avvio.AvvioEditorFML" timestamp="1397471672759" level="INFO" thread="main">
+<log4j:message><![CDATA[FML Editor Started...]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="avvio.AvvioEditorFML" timestamp="1414494956913" level="INFO" thread="main">
+<log4j:message><![CDATA[FML Editor Started...]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="avvio.AvvioEditorFML" timestamp="1421311058532" level="INFO" thread="main">
+<log4j:message><![CDATA[FML Editor Started...]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="avvio.AvvioEditorFML" timestamp="1421320994644" level="INFO" thread="main">
+<log4j:message><![CDATA[FML Editor Started...]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="avvio.AvvioEditorFML" timestamp="1421322429963" level="INFO" thread="main">
+<log4j:message><![CDATA[FML Editor Started...]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="avvio.AvvioEditorFML" timestamp="1422954299572" level="INFO" thread="main">
+<log4j:message><![CDATA[FML Editor Started...]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="avvio.AvvioEditorFML" timestamp="1426158368156" level="INFO" thread="main">
+<log4j:message><![CDATA[FML Editor Started...]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="avvio.AvvioEditorFML" timestamp="1432137997776" level="INFO" thread="main">
+<log4j:message><![CDATA[FML Editor Started...]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="avvio.AvvioEditorFML" timestamp="1432138039431" level="INFO" thread="main">
+<log4j:message><![CDATA[FML Editor Started...]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="avvio.AvvioEditorFML" timestamp="1439496386201" level="INFO" thread="main">
+<log4j:message><![CDATA[FML Editor Started...]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="avvio.AvvioEditorFML" timestamp="1550744604846" level="INFO" thread="main">
+<log4j:message><![CDATA[FML Editor Started...]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="avvio.AvvioEditorFML" timestamp="1551326363526" level="INFO" thread="main">
+<log4j:message><![CDATA[FML Editor Started...]]></log4j:message>
+</log4j:event>
+

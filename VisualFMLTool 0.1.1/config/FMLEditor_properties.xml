@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<comment>This file specifies properties of parsing that get all data from xml.</comment>
+	<entry key="fml.editor.log4j.properties.file">config/log4j.properties</entry>
+</properties>
