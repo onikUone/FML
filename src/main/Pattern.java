@@ -18,6 +18,15 @@ public class Pattern implements Serializable {
 		y = _pattern[Ndim];
 	}
 
+	public Pattern(String[] _x, String _y) {
+		int Ndim = _x.length;
+		x = new double[Ndim];
+		for(int i = 0; i < Ndim; i++) {
+			x[i] = Double.parseDouble(_x[i]);
+		}
+		y = Double.parseDouble(_y);
+	}
+
 	public Pattern(String[] _pattern) {
 		int Ndim = _pattern.length - 1;
 		x = new double[Ndim];

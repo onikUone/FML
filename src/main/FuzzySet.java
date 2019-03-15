@@ -43,9 +43,22 @@ public class FuzzySet {
 		}
 	}
 
+
+	public static double moveNoMembership(double _x) {
+		double uuu = (0.75 / 15) * _x + 0.25;	//メンバシップ形状
+		if(uuu > 1.0) {
+			uuu = 1.0;
+		}
+		if(uuu < 0.0) {
+			uuu = 0.25;
+		}
+		return uuu;
+	}
+
 	//メンバシップ関数
 	public static double calcMembership(int _num, double _x) {
 		double uuu = 0.0;
+		//0以下に関しては1を返すメンバシップ関数
 		if(_x < 0) {
 			return 1.0;
 		}
@@ -73,19 +86,34 @@ public class FuzzySet {
 	}
 
 	//適合度
-	public static double memberMulPure(Pattern _line, int[] _rule) {
-		double ans = 1.0;
-		int Ndim = _rule.length;
-		for(int i = 0; i < Ndim; i++) {
-			try {
-				//積和 適合度
-				ans *= calcMembership(_rule[i], _line.getDimValue(i));
-			} catch(Exception e) {
-
+	public static double memberMulPure(double[] _x, int[] _rule) {
+		double ans = moveNoMembership(_x[0]);	//MoveNoに対して固定のメンバシップ関数を使用
+		if(ans == 0) {
+			return ans;
+		}
+		for(int i = 0; i < _rule.length; i++) {
+			ans *= calcMembership(_rule[i], _x[i + 1]);
+			if(ans == 0) {
+				return ans;
 			}
 		}
 		return ans;
 	}
+
+	//適合度
+//	public static double memberMulPure2(Pattern _line, int[] _rule) {
+//		double ans = 1.0;
+//		int Ndim = _rule.length;
+//		for(int i = 0; i < Ndim; i++) {
+//			try {
+//				//積和 適合度
+//				ans *= calcMembership(_rule[i], _line.getDimValue(i));
+//			} catch(Exception e) {
+//
+//			}
+//		}
+//		return ans;
+//	}
 
 	//ルールの学習
 	public static void linearLearning(DataSetInfo _tra, Rule[] _rules) {
@@ -97,15 +125,13 @@ public class FuzzySet {
 		double error;
 
 		//全パターンに対して学習
-		for(int move_i = 0; move_i < _tra.getPatterns().size(); move_i++) {
-//			if(move_i == _tra.getPatterns().size() -1) {
-//				System.out.println();
-//			}
+		for(int data_i = 0; data_i < _tra.getPatterns().size(); data_i++) {
 			memberSum = 0;
-			line = _tra.getPattern(move_i);
+			line = _tra.getPattern(data_i);	//一つのパターン保持
 			//入力パターンに対する全ルールの適合度計算
 			for(int rule_i = 0; rule_i < _rules.length; rule_i++) {
-				memberships[rule_i] = _rules[rule_i].memberMulPure(line);
+//				memberships[rule_i] = FuzzySet.memberMulPure(line.getX(), _rules[rule_i].getRules());
+				memberships[rule_i] = _rules[rule_i].memberMulPure(line.getX());
 				memberSum += memberships[rule_i];
 			}
 			//推論値計算
@@ -126,46 +152,46 @@ public class FuzzySet {
 
 
 	//ルールの学習
-	public static void linearLearning2(DataSetInfo[] _tra, Rule[] _rules) {
-		double[] memberships = new double[_rules.length];
-//		double[] error = new double[_rules.length];
-		double error;
-		Pattern line;
-		double sum;	//全ルールメンバシップ値合計
-		double diff;
-		double y = 0;
-
-		//全学習用データを学習
-		for(int game_i = 0; game_i < _tra.length; game_i++) {
-			//全てのMoveを順に学習
-			for(int move_i = 0; move_i < _tra[game_i].getPatterns().size(); move_i++) {
-				sum = 0;
-				line = _tra[game_i].getPattern(move_i);
-
-				//全ルールメンバシップ値計算
-				for(int rule_i = 0; rule_i < _rules.length; rule_i++) {
-					memberships[rule_i] = _rules[rule_i].memberMulPure(line);
-					sum += memberships[rule_i];
-				}
-				//推論値計算
-				for(int rule_i = 0; rule_i < _rules.length; rule_i++) {
-					y += memberships[rule_i] * _rules[rule_i].getConclution();
-				}
-
-
-				//修正量計算
-				for(int rule_i = 0; rule_i < _rules.length; rule_i++) {
-					diff = line.getY() - (memberships[rule_i] * _rules[rule_i].getConclution());
-//					diff = line.getY() - _rules[rule_i].output(line);	//上と同義のメソッド
-					error = _rules[rule_i].getConclution() + (eta * diff) * (memberships[rule_i] / sum);
-//					_rules[rule_i].learnConclution(error);
-					_rules[rule_i].setConclution(error);
-				}
-
-			}
-		}
-
-	}
+//	public static void linearLearning2(DataSetInfo[] _tra, Rule[] _rules) {
+//		double[] memberships = new double[_rules.length];
+////		double[] error = new double[_rules.length];
+//		double error;
+//		Pattern line;
+//		double sum;	//全ルールメンバシップ値合計
+//		double diff;
+//		double y = 0;
+//
+//		//全学習用データを学習
+//		for(int game_i = 0; game_i < _tra.length; game_i++) {
+//			//全てのMoveを順に学習
+//			for(int move_i = 0; move_i < _tra[game_i].getPatterns().size(); move_i++) {
+//				sum = 0;
+//				line = _tra[game_i].getPattern(move_i);
+//
+//				//全ルールメンバシップ値計算
+//				for(int rule_i = 0; rule_i < _rules.length; rule_i++) {
+//					memberships[rule_i] = _rules[rule_i].memberMulPureOld(line);
+//					sum += memberships[rule_i];
+//				}
+//				//推論値計算
+//				for(int rule_i = 0; rule_i < _rules.length; rule_i++) {
+//					y += memberships[rule_i] * _rules[rule_i].getConclution();
+//				}
+//
+//
+//				//修正量計算
+//				for(int rule_i = 0; rule_i < _rules.length; rule_i++) {
+//					diff = line.getY() - (memberships[rule_i] * _rules[rule_i].getConclution());
+////					diff = line.getY() - _rules[rule_i].output(line);	//上と同義のメソッド
+//					error = _rules[rule_i].getConclution() + (eta * diff) * (memberships[rule_i] / sum);
+////					_rules[rule_i].learnConclution(error);
+//					_rules[rule_i].setConclution(error);
+//				}
+//
+//			}
+//		}
+//
+//	}
 
 	// ******************************************
 }
