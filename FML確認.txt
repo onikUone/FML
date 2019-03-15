@@ -1,0 +1,54 @@
+<FUZZY CONTROLLER>
+    <KNOWLEDGEBASE>
+        <FUZZYVARIABLE name="A1" scale="" domeinLeft="0.0" domeinRight="1.0" type="input">
+            <FUZZYTERM name="small" complement="false">
+                <TRIANGULARSHAPE Param1=5.5 Param2= Param3= >
+            </FUZZYTERM>
+            <FUZZYTERM name="medium" complement="false">
+                <TRIANGULARSHAPE Param1=5.5 Param2= Param3= >
+            </FUZZYTERM>
+            <FUZZYTERM name="large" complement="false">
+                <TRIANGULARSHAPE Param1=5.5 Param2= Param3= >
+            </FUZZYTERM>
+        </FUZZYVARIABLE>
+
+        <FUZZYVARIABLE name="A2" scale="" domeinLeft="0.0" domeinRight="1.0" type="input">
+            <FUZZYTERM name="small" complement="false">
+                <TRIANGULARSHAPE Param1=5.5 Param2= Param3= >
+            </FUZZYTERM>
+            <FUZZYTERM name="medium" complement="false">
+                <TRIANGULARSHAPE Param1=5.5 Param2= Param3= >
+            </FUZZYTERM>
+            <FUZZYTERM name="large" complement="false">
+                <TRIANGULARSHAPE Param1=5.5 Param2= Param3= >
+            </FUZZYTERM>
+        </FUZZYVARIABLE>
+
+        <FUZZYVARIABLE name="Class" scale="度" domeinLeft="0.0" domeinRight="1.0" type="output">
+            <FUZZYTERM name="small" complement="false">
+                <TRIANGULARSHAPE Param1=5.5 Param2= Param3= >
+            </FUZZYTERM>
+        </FUZZYVARIABLE>
+    </KNOWLEDGEBASE>
+
+    <RuleBase>
+        <Rule>
+            <Antencedent>
+                <Clause>
+                    <Variable>A1</Variable>
+                    <Term>small</Term>
+                </Clause>
+                <Clause></Clause>
+            </Antencedent>
+            <Consequent></Consequent>
+        </Rule>
+        <Rule></Rule>
+        <Rule></Rule>
+        <Rule></Rule>
+    </RuleBase>
+</FUZZY CONTROLLER>
+
+<title >ここがタイトル</title>
+<p font="" color="black" size=20 >ここが段落</p>
+
+if x is A1 and x2 is A2 then Class is B
