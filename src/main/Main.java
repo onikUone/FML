@@ -1,5 +1,6 @@
 package main;
 import java.io.IOException;
+import java.util.Arrays;
 
 public class Main {
 	//Field ******************************************
@@ -21,18 +22,20 @@ public class Main {
 		DataSetInfo tstDataInfo = new DataSetInfo(tstFileName);
 
 		//結論部リスト読み込み
-		String concFileName = "DataSets/ConclusionList/random_rule2.csv";
-		double[] concList = new double[7776];
-		DataSetInfo.inputConcList(concFileName, concList);
+//		String concFileName = "DataSets/ConclusionList/choice_rule1.csv";
+		double[] concList = new double[(int)Math.pow(6, traDataInfo.getNdim())];
+//		DataSetInfo.inputConcList(concFileName, concList);
+		Arrays.fill(concList, 0.5);
 
 		startExperiment(traDataInfo, tstDataInfo, concList);
 
 	}
 
 	static public void startExperiment(DataSetInfo _tra, DataSetInfo _tst, double[] _concList) throws IOException {
-		int Ndim = _tra.getNdim() - 1; 	//(MoveNoは固定のメンバーシップ関数を使用する)
+//		int Ndim = _tra.getNdim() - 1; 	//(MoveNoは固定のメンバシップ関数を使用する)
+		int Ndim = _tra.getNdim();	//(MoveNo に対しても全種類のメンバシップ関数を割り当てることに変更)
 
-		String resultFileName = "result/random_rule2/";
+		String resultFileName = "result/new_fixed_0.5/";
 		Output out = new Output(resultFileName);
 		ResultMaster resultMaster = new ResultMaster(resultFileName);
 		RuleSet ruleSet;
@@ -66,7 +69,7 @@ public class Main {
 		}
 
 		//結論部の学習
-		int generation = 50000;
+		int generation = 2000;
 		for(int gene_i = 0; gene_i < generation; gene_i++) {
 			//10世代ごとに途中経過表示
 			if(gene_i % 10 == 0) {
@@ -76,15 +79,28 @@ public class Main {
 			//学習
 			FuzzySet.linearLearning(_tra, rules);
 
-			//100世代ごとに結果出力
-			if(gene_i % 100 == 0) {
-				ruleSet = new RuleSet(rules);
-				resultMaster.setMSE(ruleSet, _tra, _tst);
-				resultMaster.writeMSE(gene_i);
-				resultMaster.writeConclusion(gene_i, ruleSet);
-				System.out.println();
-			}
+//			//100世代ごとに結果出力
+//			if(gene_i % 100 == 0) {
+//				ruleSet = new RuleSet(rules);
+//				resultMaster.setMSE(ruleSet, _tra, _tst);
+//				resultMaster.writeMSE(gene_i);
+//				resultMaster.writeConclusion(gene_i, ruleSet);
+//				System.out.println();
+//			}
 		}
+
+		//最終世代の結論部リスト出力
+		ruleSet = new RuleSet(rules);
+		resultMaster.writeConclusion(generation, ruleSet);
+		//最終世代のMSE出力
+		resultMaster.setMSE(ruleSet, _tra, _tst);
+		resultMaster.writeMSE(generation);
+		//推論値リスト保持用
+		double[] yTra = new double[_tra.getDataSize()];
+		double[] yTst = new double[_tst.getDataSize()];
+		FuzzySet.reasoning(_tra, rules, yTra);
+		FuzzySet.reasoning(_tst, rules, yTst);
+		resultMaster.writeY(yTra, yTst);
 
 	}
 

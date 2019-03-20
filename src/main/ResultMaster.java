@@ -51,12 +51,18 @@ public class ResultMaster {
 		this.mseTst.add(mseTst);
 	}
 
+	public void writeY(double[] _yTra, double[] _yTst) throws IOException {
+		String fileNameTra = this.nameDir + "final_yTra.csv";
+		String fileNameTst = this.nameDir + "final_yTst.csv";
+		Output.writeArray(_yTra, fileNameTra);
+		Output.writeArray(_yTst, fileNameTst);
+	}
+
 	public void writeMSE(int _nowGene) throws IOException {
 		String fileNameTra = this.nameDir + "gene" + _nowGene + "_mseTra" + ".csv";
 		String fileNameTst = this.nameDir + "gene" + _nowGene + "_mseTst" + ".csv";
 		Output.writeList(this.mseTra, fileNameTra);
 		Output.writeList(this.mseTst, fileNameTst);
-
 	}
 
 	public void writeConclusion(int _nowGene, RuleSet _ruleSet) throws IOException {

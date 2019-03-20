@@ -52,12 +52,13 @@ public class Rule {
 
 	//適合度
 	public double memberMulPure(double[] _x) {
-		double ans = FuzzySet.moveNoMembership(_x[0]);
+//		double ans = FuzzySet.moveNoMembership(_x[0]);
+		double ans = 1.0;
 		if(ans == 0) {
 			return ans;
 		}
 		for(int i = 0; i < this.rule.length; i++) {
-			ans *= FuzzySet.calcMembership(this.rule[i], _x[i + 1]);
+			ans *= FuzzySet.calcMembership(this.rule[i], _x[i]);
 			if(ans == 0) {
 				return ans;
 			}

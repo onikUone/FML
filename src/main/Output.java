@@ -28,6 +28,15 @@ public class Output {
 		pw.close();
 	}
 
+	public static void writeArray(double[] _array, String _fileName) throws IOException {
+		FileWriter fw = new FileWriter(_fileName, true);
+		PrintWriter pw = new PrintWriter( new BufferedWriter(fw) );
+		for(int i = 0; i < _array.length; i++) {
+			pw.println(_array[i]);
+		}
+		pw.close();
+	}
+
 	public static void writeConc(RuleSet _ruleSet, String _fileName) throws IOException {
 		FileWriter fw = new FileWriter(_fileName, true);
 		PrintWriter pw = new PrintWriter( new BufferedWriter(fw) );

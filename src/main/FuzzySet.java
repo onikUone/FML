@@ -87,7 +87,8 @@ public class FuzzySet {
 
 	//適合度
 	public static double memberMulPure(double[] _x, int[] _rule) {
-		double ans = moveNoMembership(_x[0]);	//MoveNoに対して固定のメンバシップ関数を使用
+//		double ans = moveNoMembership(_x[0]);	//MoveNoに対して固定のメンバシップ関数を使用
+		double ans = 1.0;
 		if(ans == 0) {
 			return ans;
 		}
@@ -140,14 +141,40 @@ public class FuzzySet {
 				y += _rules[rule_i].getConclution() * memberships[rule_i];
 			}
 			y /= memberSum;
-			diff = line.getY() - y;
 			//修正値計算
+			diff = line.getY() - y;
 			for(int rule_i = 0; rule_i < _rules.length; rule_i++) {
 				error = _rules[rule_i].getConclution() + eta * diff * memberships[rule_i] / memberSum;
 				_rules[rule_i].setConclution(error);
 			}
 		}
+	}
 
+	//推論
+	public static void reasoning(DataSetInfo _dataset, Rule[] _rules, double[] _y) {
+		Pattern line;
+		double y;
+		double[] memberships = new double[_rules.length];
+		double memberSum = 0;
+
+		for(int data_i = 0; data_i < _dataset.getPatterns().size(); data_i++) {
+			memberSum = 0;
+			line = _dataset.getPattern(data_i);
+			//適合度
+			for(int rule_i = 0; rule_i < _rules.length; rule_i++) {
+				memberships[rule_i] = _rules[rule_i].memberMulPure(line.getX());
+				memberSum += memberships[rule_i];
+			}
+			//推論値計算
+			y = 0;
+			for(int rule_i = 0; rule_i < _rules.length; rule_i++) {
+				y += _rules[rule_i].getConclution() * memberships[rule_i];
+			}
+			y /= memberSum;
+
+			//推論値リスト保持
+			_y[data_i] = y;
+		}
 	}
 
 
