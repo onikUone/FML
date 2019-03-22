@@ -69,7 +69,7 @@ public class Main {
 		}
 
 		//結論部の学習
-		int generation = 2000;
+		int generation = 1;
 		for(int gene_i = 0; gene_i < generation; gene_i++) {
 			//10世代ごとに途中経過表示
 			if(gene_i % 10 == 0) {
